@@ -23,7 +23,7 @@ urls = (
 )
 
 render = web.template.render('templates/')
-db = web.database(dbn='mysql', user='root', pw='', db='hewen')
+db = web.database(dbn='mysql', user='root', pw='Hewenchina2015', db='hewen')
 
 class index:
     def GET(self):
@@ -144,6 +144,8 @@ class page_404:
     def GET(self):
         return render.page_404()
 
-if __name__ == "__main__":
-    app = web.application(urls, globals())
-    app.run()
+#if __name__ == "__main__":
+#app = web.application(urls, globals())
+#application = app.wsgifunc()
+app = web.application(urls, globals())
+application = app.wsgifunc()
